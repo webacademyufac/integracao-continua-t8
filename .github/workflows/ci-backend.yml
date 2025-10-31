@@ -8,6 +8,9 @@ on:
             - 'sgcmapi/**'
     workflow_dispatch:
     workflow_call:
+    pull_request:
+        paths:
+            - 'sgcmapi/**'
 
 jobs:
     build:
