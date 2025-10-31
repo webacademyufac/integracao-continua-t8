@@ -1,0 +1,19 @@
+name: CI Backend
+
+on:
+    push:
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v5
+            - name: Set up JDK 17
+              uses: actions/setup-java@v5
+              with:
+                distribution: 'temurin'
+                java-version: '17'
+            - name: Maven Compile/Test
+              working-directory: sgcmapi/
+              run: mvn compile test
