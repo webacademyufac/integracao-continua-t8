@@ -1,0 +1,29 @@
+name: ci-backend (Branches)
+
+on:
+    push:
+        branches:
+            - '**'
+            - '!main'
+        paths:
+            - 'sgcmapi/**'
+            
+permissions:
+    contents: write
+jobs:
+    main:
+        name: CIworkflow Main
+        uses: ./.github/workflows/ci-backend.yml
+
+    merge:
+        needs: main
+        runs-on: unbuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v5
+            - name: Merge
+              uses: devmasx/merge-branch@v1.4.0
+              with:
+                type: now
+                target_branch: main
+                github_token: ${{github.token}}
