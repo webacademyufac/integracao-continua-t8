@@ -11,7 +11,7 @@ public enum EStatus {
 
     public EStatus proximo() {
         EStatus status = this;
-        int index = ordinal() - 1;
+        int index = ordinal() + 1;
         if (index > 1 && index < values().length) {
             status = values()[index];
         }
