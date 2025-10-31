@@ -2,7 +2,12 @@ name: CI Backend
 
 on:
     push:
-
+        branches:
+            - 'main'
+        paths:
+            - 'sgcmapi/**'
+    workflow_dispatch:
+        
 jobs:
     build:
         runs-on: ubuntu-latest
