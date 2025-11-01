@@ -49,4 +49,4 @@ jobs:
               with:
                 type: now
                 target_branch: main
-                github_token: ${{ secrets.GH_PAT }}
+                github_token: ${{ github.token }}
