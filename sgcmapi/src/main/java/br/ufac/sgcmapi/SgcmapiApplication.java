@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SgcmapiApplication {
 
 	public static void main(String[] args) {
+		System.out.println("teste");
 		SpringApplication.run(SgcmapiApplication.class, args);
 	}
 
