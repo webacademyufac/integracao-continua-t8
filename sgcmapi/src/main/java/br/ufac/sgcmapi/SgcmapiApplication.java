@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class SgcmapiApplication {
 
 	public static void main(String[] args) {
+		System.out.println("teste");
 		SpringApplication.run(SgcmapiApplication.class, args);
 	}
 
